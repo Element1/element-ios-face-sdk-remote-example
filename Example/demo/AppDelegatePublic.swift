@@ -25,6 +25,8 @@ class AppDelegatePublic: UIResponder, UIApplicationDelegate {
         
 #if !(targetEnvironment(simulator))
         // TODO: replace YOUR_EAK with the EAK provided by Element
+        let eak = "YOUR_EAK"
+        assert(eak != "YOUR_EAK")
         ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
         
         // theme: requires the asset bundles
