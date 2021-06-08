@@ -27,7 +27,8 @@ class AppDelegatePublic: UIResponder, UIApplicationDelegate {
         // TODO: replace YOUR_EAK with the EAK provided by Element
         let eak = "YOUR_EAK"
         assert(eak != "YOUR_EAK")
-        ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
+        ElementSDKConfiguration.shared().enableDebugLogs = true
+        ElementSDKConfiguration.shared().initialize(withConfigurationData: eak)
         
         // theme: requires the asset bundles
         ElementSDKConfiguration.shared().theme = .flowerPetals
